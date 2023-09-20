@@ -28,6 +28,7 @@ package mac_package;
   parameter int unsigned MAC_REG_LEN_ITER         = 5;
   parameter int unsigned MAC_REG_SHIFT_SIMPLEMUL  = 6;
   parameter int unsigned MAC_REG_SHIFT_VECTSTRIDE = 7;
+  parameter int unsigned MAC_REG_SHIFT_ONESTRIDE  = 8;
 
   // microcode offset indeces -- this should be aligned to the microcode compiler of course!
   parameter int unsigned MAC_UCODE_A_OFFS = 0;

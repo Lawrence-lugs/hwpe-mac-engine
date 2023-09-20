@@ -84,7 +84,7 @@ module mac_ctrl
   assign static_reg_shift      = reg_file.hwpe_params[MAC_REG_SHIFT_SIMPLEMUL][31:16];
   assign static_reg_simplemul  = reg_file.hwpe_params[MAC_REG_SHIFT_SIMPLEMUL][0];
   assign static_reg_vectstride = reg_file.hwpe_params[MAC_REG_SHIFT_VECTSTRIDE];
-  assign static_reg_onestride  = 4;
+  assign static_reg_onestride  = (reg_file.hwpe_params[MAC_REG_SHIFT_ONESTRIDE][4]) ? {28{1'b0},reg_file.hwpe_params[MAC_REG_SHIFT_ONESTRIDE][3:0]} : 32'd4;
 
   /* Microcode processor */
   generate
