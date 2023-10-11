@@ -283,6 +283,8 @@ module tb_mac;
     csr_write(MAC_REG_D_ADDR, 32'd0);
     csr_write(MAC_REG_NB_ITER, 32'd1);
     csr_write(MAC_REG_LEN_ITER, 32'd19);
+
+    // Set me to one if you want simple mul, otherwise set me to 0 for MAC
     csr_write(MAC_REG_SHIFT_SIMPLEMUL, 32'd1);
 
     @(posedge clk);
