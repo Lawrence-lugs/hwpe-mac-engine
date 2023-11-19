@@ -1,7 +1,7 @@
 //-----------------------------------
 // Simple MAC engine testbench
 //-----------------------------------
-`timescale 1ns/1ps
+//`timescale 1ns/1ps
 
 module tb_mac;
 
@@ -183,7 +183,7 @@ module tb_mac;
     $readmemh( "./a.mem",   a_mem   );
     $readmemh( "./b.mem",   b_mem   );
     $readmemh( "./c.mem",   c_mem   );
-    $readmemh( "./out.mem", out_mem );
+    // $readmemh( "./out.mem", out_mem );
   end
 
   // Grant control
@@ -311,6 +311,11 @@ module tb_mac;
    end
 
     #500;
+
+    $writememh( "./out.mem",   out_mem   ); //new addition
+
+
+    $finish;
 
   end
 
